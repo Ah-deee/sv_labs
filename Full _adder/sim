@@ -1,0 +1,109 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x64573c7791a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x64573c779330 .scope module, "FA_tb" "FA_tb" 3 1;
+ .timescale 0 0;
+v0x64573c790780_0 .var "a", 0 0;
+v0x64573c790870_0 .var "b", 0 0;
+v0x64573c790980_0 .var "c", 0 0;
+v0x64573c790a70_0 .net "carry", 0 0, L_0x64573c790fe0;  1 drivers
+v0x64573c790b10_0 .net "sum", 0 0, L_0x64573c790d80;  1 drivers
+S_0x64573c776dd0 .scope begin, "$ivl_for_loop0" "$ivl_for_loop0" 3 16, 3 16 0, S_0x64573c779330;
+ .timescale 0 0;
+v0x64573c776f60_0 .var/2s "i", 31 0;
+S_0x64573c78f310 .scope module, "DUT" "FA" 3 6, 4 1 0, S_0x64573c779330;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "carry";
+L_0x64573c790fe0 .functor OR 1, L_0x64573c790ec0, L_0x64573c790cc0, C4<0>, C4<0>;
+v0x64573c7900d0_0 .net "a", 0 0, v0x64573c790780_0;  1 drivers
+v0x64573c790190_0 .net "b", 0 0, v0x64573c790870_0;  1 drivers
+v0x64573c790260_0 .net "c", 0 0, v0x64573c790980_0;  1 drivers
+v0x64573c790360_0 .net "carry", 0 0, L_0x64573c790fe0;  alias, 1 drivers
+v0x64573c790400_0 .net "sum", 0 0, L_0x64573c790d80;  alias, 1 drivers
+v0x64573c7904f0_0 .net "w1", 0 0, L_0x64573c790c50;  1 drivers
+v0x64573c7905e0_0 .net "w2", 0 0, L_0x64573c790cc0;  1 drivers
+v0x64573c790680_0 .net "w3", 0 0, L_0x64573c790ec0;  1 drivers
+S_0x64573c78f510 .scope module, "ha1" "HA" 4 7, 5 1 0, S_0x64573c78f310;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_0x64573c790c50 .functor XOR 1, v0x64573c790780_0, v0x64573c790870_0, C4<0>, C4<0>;
+L_0x64573c790cc0 .functor AND 1, v0x64573c790780_0, v0x64573c790870_0, C4<1>, C4<1>;
+v0x64573c78f760_0 .net "a", 0 0, v0x64573c790780_0;  alias, 1 drivers
+v0x64573c78f840_0 .net "b", 0 0, v0x64573c790870_0;  alias, 1 drivers
+v0x64573c78f900_0 .net "carry", 0 0, L_0x64573c790cc0;  alias, 1 drivers
+v0x64573c78f9a0_0 .net "sum", 0 0, L_0x64573c790c50;  alias, 1 drivers
+S_0x64573c78fae0 .scope module, "ha2" "HA" 4 12, 5 1 0, S_0x64573c78f310;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_0x64573c790d80 .functor XOR 1, L_0x64573c790c50, v0x64573c790980_0, C4<0>, C4<0>;
+L_0x64573c790ec0 .functor AND 1, L_0x64573c790c50, v0x64573c790980_0, C4<1>, C4<1>;
+v0x64573c78fd50_0 .net "a", 0 0, L_0x64573c790c50;  alias, 1 drivers
+v0x64573c78fdf0_0 .net "b", 0 0, v0x64573c790980_0;  alias, 1 drivers
+v0x64573c78fe90_0 .net "carry", 0 0, L_0x64573c790ec0;  alias, 1 drivers
+v0x64573c78ff60_0 .net "sum", 0 0, L_0x64573c790d80;  alias, 1 drivers
+    .scope S_0x64573c779330;
+T_0 ;
+    %vpi_call/w 3 10 "$dumpfile", "wave.vcd" {0 0 0};
+    %vpi_call/w 3 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x64573c779330 {0 0 0};
+    %vpi_call/w 3 12 "$display", "a b c | SUM  CARRY" {0 0 0};
+    %vpi_call/w 3 13 "$display", "------|-----------" {0 0 0};
+    %vpi_call/w 3 14 "$monitor", "%b %b %b | %b  %b", v0x64573c790780_0, v0x64573c790870_0, v0x64573c790980_0, v0x64573c790b10_0, v0x64573c790a70_0 {0 0 0};
+    %fork t_1, S_0x64573c776dd0;
+    %jmp t_0;
+    .scope S_0x64573c776dd0;
+t_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x64573c776f60_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x64573c776f60_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x64573c776f60_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0x64573c790980_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x64573c790870_0, 0, 1;
+    %store/vec4 v0x64573c790780_0, 0, 1;
+    %delay 10, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x64573c776f60_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x64573c776f60_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .scope S_0x64573c779330;
+t_0 %join;
+    %vpi_call/w 3 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "-";
+    "FA_tb.sv";
+    "FA.sv";
+    "HA.sv";
