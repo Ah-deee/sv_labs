@@ -1,0 +1,21 @@
+ahdee@ahdee-LOQ-15IAX9:~/sv_labs/ALU$ vvp sim
+VCD info: dumpfile wave.vcd opened for output.
+Operation            | Inputs         | dout
+----------------------------------------------------
+Add                  | a=10 b=5 | dout=15
+Increment a          | a=10 b=5 | dout=11
+Subtract             | a=10 b=5 | dout=5
+Decrement a          | a=10 b=5 | dout=9
+Multiply             | a=10 b=5 | dout=50
+Divide               | a=10 b=5 | dout=2
+Shift right          | a=10 b=5 | dout=5
+Shift left           | a=10 b=5 | dout=20
+AND                  | a=10 b=5 | dout=0
+OR                   | a=10 b=5 | dout=15
+Invert a             | a=10 b=5 | dout=65525
+NAND                 | a=10 b=5 | dout=65535
+NOR                  | a=10 b=5 | dout=65520
+XOR                  | a=10 b=5 | dout=15
+XNOR                 | a=10 b=5 | dout=65520
+Buffer a             | a=10 b=5 | dout=10
+ALU_tb.sv:46: $finish called at 160 (1s)

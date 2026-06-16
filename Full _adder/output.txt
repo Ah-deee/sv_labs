@@ -1,0 +1,13 @@
+ahdee@ahdee-LOQ-15IAX9:~/sv_labs/Full _adder$ vvp sim
+VCD info: dumpfile wave.vcd opened for output.
+a b c | SUM  CARRY
+------|-----------
+0 0 0 | 0  0
+0 0 1 | 1  0
+0 1 0 | 1  0
+0 1 1 | 0  1
+1 0 0 | 1  0
+1 0 1 | 0  1
+1 1 0 | 0  1
+1 1 1 | 1  1
+FA_tb.sv:20: $finish called at 80 (1s)
