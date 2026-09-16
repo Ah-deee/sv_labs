@@ -3,7 +3,7 @@ module baud_rate_generator #(
     parameter  baud_rate = 9600
 ) (
     input clk,rstn,
-    output logic tx_en,rx_en
+    output logic tx_tick,rx_tick
 );
  
     localparam integer BAUD_COUNTER_MAX_TX = clk_freq / baud_rate;
@@ -17,29 +17,27 @@ module baud_rate_generator #(
     always_ff @(posedge clk) begin
         if (!rstn) begin
             baud_counter_tx <= 0;
-            tx_en <= 0;
+            tx_tick <= 0;
         end else if (baud_counter_tx == BAUD_COUNTER_MAX_TX - 1) begin
             baud_counter_tx <= 0;
-            tx_en <= 1;
+            tx_tick <= 1;
         end else begin
             baud_counter_tx <= baud_counter_tx + 1;
-            tx_en <= 0;
+            tx_tick <= 0;
         end
     end
 
     always_ff @(posedge clk) begin
         if (!rstn) begin
             baud_counter_rx <= 0;
-            rx_en <= 0;
-        end else begin
-            baud_counter_rx <= baud_counter_rx + 1;
-        end
-        if (baud_counter_rx == BAUD_COUNTER_MAX_RX - 1) begin
+            rx_tick <= 0;
+        end 
+        else if (baud_counter_rx == BAUD_COUNTER_MAX_RX - 1) begin
             baud_counter_rx <= 0;
-            rx_en <= 1;
+            rx_tick <= 1;
         end else begin
             baud_counter_rx <= baud_counter_rx + 1;
-            rx_en <= 0;
+            rx_tick <= 0;
         end
     end 
 
