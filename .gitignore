@@ -1,0 +1,8 @@
+#Questasim generated files
+work/
+transcript/
+*.wlf
+*.log
+csrc/
+*.vstf
+*.ucdb
