@@ -1,37 +1,77 @@
 module transmitter_block(
-    input clk,wr_en,tx_en,rst, 
+    input clk,wr_en,tx_tick,rst, 
     input logic [7:0] data_in,
-    output tx,busy
+    output logic tx,busy
 );
- parameter IDLE = 2'b00,START = 2'b01,DATA = 2'b10, STOP = 2'b11;
+ localparam IDLE = 2'b00,START = 2'b01,DATA = 2'b10, STOP = 2'b11;
 
 
- logic [7:0] data_in;
+ logic [7:0] data;
  logic [1:0] state;
  logic [2:0] bit_count;
 
 //Four states: IDLE START DATA STOP
 
-always_ff(posedge clk)begin
-    if(rst)begin
-        tx = 1'b1;
-    end
+assign busy = (state != IDLE);
 
+always_ff@(posedge clk)begin
+    if(rst)begin
+        tx <= 1'b1;
+        state <= IDLE;
+        bit_count <= 3'b000;
+        data <= 8'b0;
+    end
+    else
     begin
         case(state)
             IDLE:begin
-                if(wr_en && tx_en)begin
+                if(wr_en)begin
                     state <= START;
                     data <=data_in;
                     bit_count <= 3'b000;
                 end
-                state <= START;
-                data <=data_in;
-                bit_count <= 3'b000;
+
+                else begin
+                    state <= IDLE;
+                end
             end
 
             START:begin
-
+                if(tx_tick)begin
+                    tx <= 1'b0;
+                    state <= DATA;
+                end
+                else begin
+                    state <= START;
+                end
             end
+
+            DATA:begin
+                if(tx_tick)begin
+                    tx <= data[7];
+                    data <= data<<1;
+                    if(bit_count==7)begin
+                       state <= STOP; 
+                    end
+                    else begin
+                       bit_count <= bit_count+1;      
+                    end
+                end
+            end
+
+            STOP:begin
+                if(tx_tick)begin
+                    tx <= 1'b1;
+                    state <= IDLE;
+                end
+            end
+
+            default:begin
+                tx <= 1'b1;
+                state <= IDLE;
+            end
+        endcase
     end
 end
+
+endmodule
