@@ -1,14 +1,12 @@
-//TODO: Data shifting bug
 module transmitter_block(
     input clk,wr_en,tx_tick,rst, 
     input logic [7:0] data_in,
     output logic tx,busy
 );
- localparam IDLE = 2'b00,START = 2'b01,DATA = 2'b10, STOP = 2'b11;
-
-
+ 
+ typedef enum logic [1:0] {IDLE, START, DATA, STOP} state_t;
+ state_t     state;
  logic [7:0] data;
- logic [1:0] state;
  logic [2:0] bit_count;
 
 //Four states: IDLE START DATA STOP
@@ -39,10 +37,9 @@ always_ff@(posedge clk)begin
             end
 
             START:begin
-                tx <= 1'b0;
                 if(tx_tick)begin
+                    tx <= 1'b0;
                     state <= DATA;
-                    tx <= data[0];
                 end
                 else begin
                     state <= START;
@@ -51,14 +48,13 @@ always_ff@(posedge clk)begin
 
             DATA:begin
                 if(tx_tick)begin
-                    tx <= data[1];
-                    data <= data>>1;
+                    tx <= data[0];
+                    data <= data>>1;  
                     if(bit_count==3'd7)begin
-                       state <= STOP;
-                       tx <=1'b1; 
+                       state <= STOP; 
                     end
                     else begin
-                       bit_count <= bit_count+1;      
+                        bit_count <= bit_count+1; 
                     end
                 end
             end
