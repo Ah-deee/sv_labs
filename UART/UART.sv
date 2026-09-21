@@ -1,4 +1,7 @@
-module UART(
+module UART#(
+    parameter clk_freq  = 50_000_000,
+    parameter baud_rate = 9600
+)(
     input logic rst,
     input logic clk, 
     input logic wr_en, 
