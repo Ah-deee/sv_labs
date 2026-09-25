@@ -6,3 +6,4 @@ transcript/
 csrc/
 *.vstf
 *.ucdb
+generated
