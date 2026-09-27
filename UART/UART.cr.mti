@@ -1,1 +1,35 @@
+C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module transmitter_block
 
+Top level modules:
+	transmitter_block
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module receiver_block
+
+Top level modules:
+	receiver_block
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/UART.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/UART.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/cov.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/cov.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module baud_rate_generator
+
+Top level modules:
+	baud_rate_generator
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/uart_pkg.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/uart_pkg.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+
+} {} {}}
