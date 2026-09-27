@@ -1,2 +1,0 @@
-- different covergroups for each module(rx,tx,baud_gen)
-- 
