@@ -1,4 +1,11 @@
-C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
+C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling interface UART_if
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
 QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
 -- Compiling module transmitter_block
 
