@@ -16,7 +16,7 @@ logic [2:0] index = 3'b0;
 logic [7:0] temp = 8'b0;
 logic rx_meta,rx_s;
 
-always_ff@(posedge clk)begin
+always_ff@(posedge clk)begin: metastable
     if(rst)begin
         rx_meta <= 1'b1;
         rx_s <= 1'b1;
@@ -25,7 +25,8 @@ always_ff@(posedge clk)begin
         rx_meta <= rx;
         rx_s <= rx_meta;
     end
-end
+end: metastable
+
 
 
 always_ff @( posedge clk ) begin
@@ -53,7 +54,6 @@ always_ff @( posedge clk ) begin
                     if(sample == 7)begin
                         sample <=0;
                         if(rx_s)begin
-                            sample <= 0;
                             state <= IDLE;
                         end
                         else begin
@@ -63,23 +63,22 @@ always_ff @( posedge clk ) begin
                             end
                             
                         end
-                    end
                     else begin
                             sample <= sample + 1;
+                    end
                 end
 
                 DATA_OUT:begin
                     if(sample == 15)begin
                         sample <= 0;
                         temp[index] <= rx_s;
-                        index <= index + 1;
-                    end
 
-                    if(index == 7)begin
-                        state <= STOP;
+                        if(index == 7)begin
+                            state <= STOP;
+                        end
+                            else
+                                index <= index + 1;
                     end
-                        else
-                            index <= index + 1;
                     else
                         sample <= sample+1;
                 end
