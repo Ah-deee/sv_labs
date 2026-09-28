@@ -5,6 +5,8 @@ interface UART_if;
 
     modport dut(input rst,wr_en,rdy_clr,clk, data_in, 
                 output data_out,rdy,busy);
+
     modport tb(input data_out,rdy,busy, 
                 output rst,wr_en,rdy_clr,data_in,clk);
+                
 endinterface

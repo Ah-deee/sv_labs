@@ -8,131 +8,131 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/anadi/Downloads/sv_labs/UART
+dC:/Users/anadi/Downloads/sv_labs/UART
 vbaud_rate_generator
 2C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
-Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1790485597
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z1 !s110 1790589103
 !i10b 1
 !s100 ;DUlI=iVn@lLc9dRYM1jM3
 IDGiI9AE1zPgngPG8ma;io0
 S1
-R0
-Z3 w1790339957
+Z2 dC:/users/anadi/downloads/sv_labs/UART
+w1789997505
 8C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
-!i122 2
+!i122 8
 L0 1 46
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2024.1;79
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2024.1;79
 r1
 !s85 0
 31
-Z6 !s108 1790485596.000000
+Z5 !s108 1790589103.000000
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv|
 !i113 0
-Z7 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 tCvgOpt 0
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
 vreceiver_block
 2C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
+R0
 R1
-!s110 1790485596
 !i10b 1
 !s100 1UCagSP]1;Z4ejA<gK36g0
 I59XC2N@c<Fdhb`Loc4KeQ2
 S1
-R0
-w1790482393
+R2
+Z8 w1790588960
 8C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
-!i122 1
+!i122 7
 L0 1 106
+R3
 R4
-R5
 r1
 !s85 0
 31
-R6
+!s108 1790589102.000000
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv|
 !i113 0
+R6
 R7
-R8
 vtransmitter_block
 2C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
+R0
 R1
-R2
 !i10b 1
 !s100 ledOQ_jFLV6dTF^fFc<5m0
 IcYBbFB6FnG=bEo3WNln=V3
 S1
-R0
-R3
+R2
+w1789640262
 8C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
-!i122 3
+!i122 9
 L0 1 77
+R3
 R4
-R5
 r1
 !s85 0
 31
-Z9 !s108 1790485597.000000
+R5
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv|
 !i113 0
+R6
 R7
-R8
 vUART
 2C:/Users/anadi/Downloads/sv_labs/UART/UART.sv
+R0
 R1
-R2
 !i10b 1
 !s100 dSDCEUb4S6:2R=T0e?Eeg3
 Ii`Qclmd^hdk3DGZZ`IJjB0
 S1
-R0
-R3
+R2
+w1790250881
 8C:/Users/anadi/Downloads/sv_labs/UART/UART.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/UART.sv
-!i122 4
+!i122 10
 L0 1 14
+R3
 R4
-R5
 r1
 !s85 0
 31
-R9
+R5
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/UART.sv|
 !i113 0
+R6
 R7
-R8
 n@u@a@r@t
 YUART_if
 2C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
+R0
 R1
-!s110 1790486116
 !i10b 1
 !s100 mjkLWe2cMBDRZ@om09<:`2
 I2ZS8=?HCSb[_0g[eeTHHT0
 S1
-R0
-w1790485846
+R2
+R8
 8C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
-!i122 6
+!i122 11
 L0 1 0
+R3
 R4
-R5
 r1
 !s85 0
 31
-!s108 1790486116.000000
+R5
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv|
 !i113 0
+R6
 R7
-R8
 n@u@a@r@t_if
