@@ -8,48 +8,48 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/anadi/Downloads/sv_labs/UART
+Z0 dC:/Users/anadi/Downloads/sv_labs/UART
 vbaud_rate_generator
 2C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1790589103
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1790589103
 !i10b 1
 !s100 ;DUlI=iVn@lLc9dRYM1jM3
 IDGiI9AE1zPgngPG8ma;io0
 S1
-Z2 dC:/users/anadi/downloads/sv_labs/UART
+Z3 dC:/users/anadi/downloads/sv_labs/UART
 w1789997505
 8C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv
 !i122 8
 L0 1 46
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2024.1;79
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2024.1;79
 r1
 !s85 0
 31
-Z5 !s108 1790589103.000000
+Z6 !s108 1790589103.000000
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/baud_rate_generator.sv|
 !i113 0
-Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0
+Z7 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
 vreceiver_block
 2C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
-R0
 R1
+R2
 !i10b 1
 !s100 1UCagSP]1;Z4ejA<gK36g0
 I59XC2N@c<Fdhb`Loc4KeQ2
 S1
-R2
-Z8 w1790588960
+R3
+Z9 w1790588960
 8C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv
 !i122 7
 L0 1 106
-R3
 R4
+R5
 r1
 !s85 0
 31
@@ -57,82 +57,120 @@ r1
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/receiver_block.sv|
 !i113 0
-R6
 R7
+R8
+vtop
+2C:/Users/anadi/Downloads/sv_labs/UART/top.sv
+R1
+DXx6 mtiUvm 7 uvm_pkg 0 22 MiVhEBb9cnBN5^J=<XBKI2
+!s110 1790599880
+!i10b 1
+!s100 70z7EhkM?a2KWmcz?;cQ=2
+INX=Mh8O^6Z4G]RmkQJGUH2
+S1
+R0
+w1790599614
+8C:/Users/anadi/Downloads/sv_labs/UART/top.sv
+FC:/Users/anadi/Downloads/sv_labs/UART/top.sv
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+!i122 12
+L0 1 6475
+R4
+R5
+r1
+!s85 0
+31
+!s108 1790599879.000000
+!s107 C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|C:/Users/anadi/Downloads/sv_labs/UART/top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/top.sv|
+!i113 0
+R7
+R8
 vtransmitter_block
 2C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
-R0
 R1
+R2
 !i10b 1
 !s100 ledOQ_jFLV6dTF^fFc<5m0
 IcYBbFB6FnG=bEo3WNln=V3
 S1
-R2
+R3
 w1789640262
 8C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv
 !i122 9
 L0 1 77
-R3
 R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/transmitter_block.sv|
 !i113 0
-R6
 R7
+R8
 vUART
 2C:/Users/anadi/Downloads/sv_labs/UART/UART.sv
-R0
 R1
+R2
 !i10b 1
 !s100 dSDCEUb4S6:2R=T0e?Eeg3
 Ii`Qclmd^hdk3DGZZ`IJjB0
 S1
-R2
+R3
 w1790250881
 8C:/Users/anadi/Downloads/sv_labs/UART/UART.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/UART.sv
 !i122 10
 L0 1 14
-R3
 R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/UART.sv|
 !i113 0
-R6
 R7
+R8
 n@u@a@r@t
 YUART_if
 2C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
-R0
 R1
+R2
 !i10b 1
 !s100 mjkLWe2cMBDRZ@om09<:`2
 I2ZS8=?HCSb[_0g[eeTHHT0
 S1
-R2
-R8
+R3
+R9
 8C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
 FC:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv
 !i122 11
 L0 1 0
-R3
 R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/anadi/Downloads/sv_labs/UART/UART_if.sv|
 !i113 0
-R6
 R7
+R8
 n@u@a@r@t_if
