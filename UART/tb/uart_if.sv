@@ -8,5 +8,11 @@ interface uart_if;
 
     modport tb(input data_out,rdy,busy, 
                 output rst,wr_en,rdy_clr,data_in,clk);
+
+    clocking cb @(posedge clk);
+        default input #3ns output #2ns;
+        input data_out,rdy,busy;
+        output rst,wr_en,rdy_clr,data_in;
+    endclocking
                 
 endinterface
