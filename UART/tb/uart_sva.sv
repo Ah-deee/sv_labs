@@ -1,30 +1,37 @@
-module uart_sva #(parameter int CLKS_PER_BIT = 5208) (
-  input logic       clk, rst,
-  input logic       wr_en, rdy_clr,
-  input logic       tx, busy, rdy,
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+
+module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK = 325) (
+  input logic clk, rst,
+  input logic wr_en, rdy_clr,
+  input logic tx, busy, rdy,
   input logic [7:0] data_out
 );
 
-  // RST001 / RST002: reset values (sync reset -> visible next cycle)
+//ESS-01: Reset and Sanity
   a_rst_values: assert property (@(posedge clk)
       rst |=> (tx == 1'b1 && busy == 1'b0 && rdy == 1'b0 && data_out == 8'h00))
-    else $error("a_rst_values failed");
+    else `uvm_error("SVA","a_rst_values failed");
 
   // rst applied after at least one completed frame
   c_rst_after_traffic: cover property (@(posedge clk)
       $fell(busy) ##[1:$] rst);
 
-  // TXF003: tx idles high whenever busy = 0
-  a_tx_idle_high: assert property (@(posedge clk) disable iff (rst)
-      !busy |-> tx)
-    else $error("a_tx_idle_high failed");
-  c_tx_idle_high: cover property (@(posedge clk) disable iff (rst) !busy);
+  a_no_xz: assert property (@(posedge clk) disable iff(rst)
+      !$isunknown({tx,busy,data,rdy}))
+      else `uvm_error("SVA","a_no_xz failed");
 
-  // TXI005: busy rises the cycle after an accepted wr_en
-  a_busy_after_wr_en: assert property (@(posedge clk) disable iff (rst)
-      (wr_en && !busy) |=> busy)
-    else $error("a_busy_after_wr_en failed");
-  c_busy_after_wr_en: cover property (@(posedge clk) disable iff (rst)
-      wr_en && !busy);
+//ESS-02: Baud rate ticks
+  a_tx_tick_period: assert property(@(posedge clk)disable iff(rst)
+      tx_tick |=> (!tx_tick)[*CLKS_PER_BIT-1] ##1 tx_tick)
+      else `uvm_error("SVA","a_tx_tick_period");
+  c_tx_tick: cover property(@(posedge clk)disable iff (rst) tx_tick);
+
+  a_rx_tick_period: assert property(@(posedge clk)disable iff(rst)
+      rx_tick |=> (!rx_tick)[*CLKS_PER_TICK-1] ##1 rx_tick)
+      else `uvm_error("SVA","a_rx_tick_period");
+  c_rx_tick: cover property(@(posedge clk)disable iff (rst) rx_tick);
+
+
 
 endmodule
