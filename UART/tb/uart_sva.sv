@@ -41,7 +41,7 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
       !busy |-> tx)
       else `uvm_error("SVA","a_tx_idle_high")
   c_tx_idle_high: cover property(@(posedge clk)disable iff(rst)
-      !busy)
+      !busy);
 
   // start bit: within one bit time of busy rising, tx goes low for a full bit
 
@@ -50,22 +50,22 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
       //$rose(busy) |-> ##[0:CLKS_PER_BIT] ($fell(tx) ##0 (!tx)[*CLKS_PER_BIT])
       else `uvm_error("SVA","a_start_bit")
   c_start_bit: cover property(@(posedge clk)disable iff(rst)
-      $rose(busy ##[1:CLKS_PER_BIT] $fell(tx)))
+      $rose(busy) ##[1:CLKS_PER_BIT] $fell(tx));
   
   // tick arrived immediately: tx falls 1 cycle after busy rises
   c_start_min: cover property (@(posedge clk) disable iff (rst)
-    $rose(busy) ##1 $fell(tx))
+    $rose(busy) ##1 $fell(tx));
 
   // tick had just fired: tx falls a full bit time later
   c_start_max: cover property (@(posedge clk) disable iff (rst)
-    $rose(busy) ##CLKS_PER_BIT $fell(tx))
+    $rose(busy) ##CLKS_PER_BIT $fell(tx));
 
   a_stop_bit: assert property (@(posedge clk) disable iff (rst)
     $fell(busy)|->tx[*CLKS_PER_BIT])
     else `uvm_error("SVA","a_stop_bit")
 
   c_stop_bit: cover property(@(posedge clk) disable iff (rst)
-    $fell(busy))
+    $fell(busy));
 
 
 
