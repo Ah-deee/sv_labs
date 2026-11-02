@@ -22,6 +22,8 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
       !$isunknown({tx,busy,data_out,rdy}))
       else `uvm_error("SVA","a_no_xz failed")
 
+
+
 //ESS-02: Baud rate ticks
   a_tx_tick_period: assert property(@(posedge clk)disable iff(rst)
       tx_tick |=> (!tx_tick)[*CLKS_PER_BIT-1] ##1 tx_tick)
@@ -33,6 +35,8 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
       else `uvm_error("SVA","a_rx_tick_period")
   c_rx_tick: cover property(@(posedge clk)disable iff (rst) 
       rx_tick);
+
+
 
 //ESS-03:TX basic framing
   //tx idles when not busy(since it is active low)
@@ -68,5 +72,29 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
     $fell(busy));
 
 
+
+//ESS-04: TX Control and Handshake
+  //busy rises a cycle after wr_en is accepted
+  a_busy_after_wr_en: assert property(@(posedge clk) disable iff(rst)
+    (wr_en && !busy) |=> $rose(busy))
+    else `uvm_error("SVA","a_busy_after_wr_en")
+  c_valid_wr_en: cover property(@(posedge clk) disable iff(rst)
+    (wr_en && !busy));
+
+  //busy covers start bit+ 8 bits + stop bit
+  a_busy_length: assert property(@(posedge clk) disable iff(rst)
+    $rose(busy) |-> (busy throughout (tx_tick[->10])) ##1 !busy)
+    else `uvm_error("SVA","a_busy_length")
+  c_busy_ticks: cover property (@(posedge clk) disable iff (rst)
+    $rose(busy) ##0 (busy throughout (tx_tick[->10])) ##1 !busy);
+
+  a_wr_en_while_busy_drop: assert property(@(posedge clk) disable iff(rst)
+    $rose(busy) |-> $past(wr_en && !busy))
+    else `uvm_error("SVA","a_wr_en_while_busy_drop")
+  c_wr_en_while_busy: cover property(@(posedge clk) disable iff(rst)
+    (wr_en && busy));
+    
+// ESS-05: one rdy per received frame
+  c_rdy_rise: cover property (@(posedge clk) disable iff (rst) $rose(rdy));
 
 endmodule
