@@ -97,4 +97,21 @@ module uart_sva #(parameter int CLKS_PER_BIT = 5208, parameter int CLKS_PER_TICK
 // ESS-05: one rdy per received frame
   c_rdy_rise: cover property (@(posedge clk) disable iff (rst) $rose(rdy));
 
+//ESS-07: RX handshake
+  //rdy stays high until rdy_clr
+  a_rdy_high_rdy_clr: assert property(@(posedge clk)  disable iff(rst)
+    (rdy && rdy_clr) |=> !rdy)
+    else `uvm_error("SVA","a_rdy_high_rdy_clr")
+  c_rdy_high_rdy_clr: cover property(@(posedge clk) disable iff(rst)
+    rdy && rdy_clr);
+
+  //data_out stable when rx ready(RX not overruned)
+  a_data_stable: assert property(@(posedge clk) disable iff(rst)
+    (rdy && !rdy_clr) |=> $stable(data_out))
+    else `uvm_error("SVA","a_data_stable")
+
+//ESS-06 does not have internal signals exposed
+//ESS-08,09 are scoreboard related
+//ESS-10,11 loopback for bad stop bit can't be driven
+//ESS-12 Baud drift
 endmodule
