@@ -1,3 +1,4 @@
+module uart_bind;
 bind UART uart_sva #(.CLKS_PER_BIT(clk_freq / baud_rate)) u_sva (
   .clk     (bus.clk),
   .rst     (bus.rst),
@@ -8,3 +9,4 @@ bind UART uart_sva #(.CLKS_PER_BIT(clk_freq / baud_rate)) u_sva (
   .rdy     (bus.rdy),
   .data_out(bus.data_out)
 );
+endmodule
