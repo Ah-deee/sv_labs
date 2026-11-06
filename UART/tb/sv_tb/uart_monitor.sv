@@ -21,12 +21,14 @@ class uart_monitor;
                 continue;
             end
 
+            //data_in is given to the reference model when TX is idle
             if (vif.mon_cb.wr_en && !vif.mon_cb.busy) begin
                 t = new();
                 t.data = vif.mon_cb.data;
                 mon2ref.put(t);
             end
 
+            //When rdy rises, it means new data is in data_out, which is given to the scoreboard
             if(vif.mon_cb.rdy && !rdy_q)begin
                 t = new();
                 t.data_out = vif.mon_cb.data_out;
@@ -36,7 +38,5 @@ class uart_monitor;
             rdy_q = vif.mon_cb.rdy;
         end
     endtask
-
-
 
 endclass
