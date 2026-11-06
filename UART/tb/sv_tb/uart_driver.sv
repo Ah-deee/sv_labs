@@ -44,7 +44,8 @@ class uart_driver;
 
         $display("%t %s",$time,t.convert2string());
 
-        vif.drv_cb.rdy_clr <= 1'b1;
+        vif.drv_cb.rdy_clr <= 1'b1;@(posedge vif.clk)
+        vif.drv_cb.rdy_clr <= 1'b0;
     endtask
 
 
