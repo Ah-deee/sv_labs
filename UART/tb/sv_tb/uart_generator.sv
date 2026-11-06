@@ -21,7 +21,7 @@ class uart_generator;
             end else if(!t.randomize())
                     $fatal(1, "[GEN] randomize failed");
             gen2drv.put(t);
-            $display("[GEN] %0t %s",$time,t.covert2string());
+            $display("[GEN] %0t %s",$time,t.convert2string());
         end
         ->done;
     endtask

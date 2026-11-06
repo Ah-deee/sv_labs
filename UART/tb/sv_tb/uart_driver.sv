@@ -7,7 +7,8 @@ class uart_driver;
     //mailbox #(uart_transaction) drv2sb;
     //mailbox #(uart_transaction) drv2rm;
 
-    function new(mailbox #(uart_transaction) gen2drv);
+    function new(virtual uart_if.drv vif ,mailbox #(uart_transaction) gen2drv);
+        this.vif = vif;
         this.gen2drv = gen2drv;
     endfunction
 
@@ -41,7 +42,7 @@ class uart_driver;
         wait(vif.drv_cb.busy);
         wait(vif.drv_cb.rdy);
 
-        $display("%t %s",$time,t.covert2string());
+        $display("%t %s",$time,t.convert2string());
 
         vif.drv_cb.rdy_clr <= 1'b1;
     endtask

@@ -21,7 +21,7 @@ class uart_transaction;
         copy.id = id;
     endfunction
 
-    function string covert2string();
+    function string convert2string();
         return $sformatf("id=%0d data=0x%02h gap=%0d data_out=0x%02h", id, data, gap, data_out);
     endfunction
 endclass
