@@ -4,8 +4,6 @@ class uart_driver;
     virtual uart_if.drv vif;
     int n_driven = 0;
     mailbox #(uart_transaction) gen2drv;
-    //mailbox #(uart_transaction) drv2sb;
-    //mailbox #(uart_transaction) drv2rm;
 
     function new(virtual uart_if.drv vif ,mailbox #(uart_transaction) gen2drv);
         this.vif = vif;
