@@ -24,7 +24,7 @@ class uart_monitor;
             //data_in is given to the reference model when TX is idle
             if (vif.mon_cb.wr_en && !vif.mon_cb.busy) begin
                 t = new();
-                t.data = vif.mon_cb.data;
+                t.data = vif.mon_cb.data_in;
                 mon2ref.put(t);
             end
 
@@ -33,7 +33,7 @@ class uart_monitor;
                 t = new();
                 t.data_out = vif.mon_cb.data_out;
                 mon2sb.put(t);
-                $$display("[MON] %0t RX delivered %0h",$time,t.data_out);
+                $display("[MON] %0t RX delivered %0h",$time,t.data_out);
             end
             rdy_q = vif.mon_cb.rdy;
         end
