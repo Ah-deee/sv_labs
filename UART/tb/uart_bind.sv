@@ -1,5 +1,5 @@
 module uart_bind;
-bind UART uart_sva #(.CLKS_PER_BIT(clk_freq / baud_rate)) u_sva (
+bind UART uart_sva #(.CLKS_PER_BIT(clk_freq / baud_rate),.CLKS_PER_TICK(clk_freq/(baud_rate*16))) u_sva (
   .clk     (bus.clk),
   .rst     (bus.rst),
   .wr_en   (bus.wr_en),
