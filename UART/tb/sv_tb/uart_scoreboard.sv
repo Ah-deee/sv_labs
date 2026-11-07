@@ -42,4 +42,8 @@ class uart_scoreboard;
     function void report();
         $display("[SB] Matches = %0d, Mismatches = %0d, Coverage = %0.2f%%",n_match,n_mismatch,cov.get_coverage());
     endfunction
+
+    function int n_checked();
+        return n_match+n_mismatch;
+    endfunction
 endclass
