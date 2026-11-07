@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 interface uart_if;
     bit clk;
     logic rst,wr_en,rdy_clr,rdy,busy;
