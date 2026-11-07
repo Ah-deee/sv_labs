@@ -12,6 +12,7 @@ class uart_env;
 
     int count;
     int clks_per_bit;
+    
     function new(virtual uart_if vif, int count, int clks_per_bit);
         this.vif = vif;
         this.count = count;
