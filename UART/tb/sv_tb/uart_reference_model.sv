@@ -2,6 +2,7 @@
 class uart_reference_model;
     mailbox #(uart_transaction) mon2ref;
     mailbox #(uart_transaction) ref2sb;
+    int n_pred = 0;
 
     function new(mailbox #(uart_transaction) mon2ref, mailbox #(uart_transaction) ref2sb);
         this.mon2ref = mon2ref;
@@ -20,6 +21,7 @@ class uart_reference_model;
             exp.data_out = in.data;
             ref2sb.put(exp);
             $display("[REF] %0t  in 0x%02h  frame %010b  expect 0x%02h", $time, in.data, frame(in.data), exp.data_out);
+            n_pred++;
         end
     endtask
 endclass

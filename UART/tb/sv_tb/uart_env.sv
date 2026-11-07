@@ -12,7 +12,7 @@ class uart_env;
 
     int count;
     int clks_per_bit;
-    function new(virtual uart_if vif, int count);
+    function new(virtual uart_if vif, int count, int clks_per_bit);
         this.vif = vif;
         this.count = count;
         this.clks_per_bit = clks_per_bit;
@@ -62,8 +62,8 @@ class uart_env;
         $display("--------------------------------------------------");
         $display("[ENV] driven=%0d predicted=%0d", drv.n_driven, rm.n_pred);
         sb.report();
-        if(sb.n_mismatch == 0 && sb.n_match == count && ref2sb.num())
-            $display("[ENV] TEST PASSED"");
+        if(sb.n_mismatch == 0 && sb.n_match == count && ref2sb.num()==0)
+            $display("[ENV] TEST PASSED");
         else
             $display("[ENV] TEST FAILED");
         $display("--------------------------------------------------");
