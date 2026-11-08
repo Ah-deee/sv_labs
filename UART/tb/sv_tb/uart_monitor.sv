@@ -1,5 +1,3 @@
-`include "uart_transaction.sv"
-
 class uart_monitor;
     virtual uart_if.mon vif;
     mailbox #(uart_transaction) mon2sb;

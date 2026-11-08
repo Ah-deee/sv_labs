@@ -1,4 +1,3 @@
-`include "uart_transaction.sv"
 class uart_scoreboard;
     mailbox #(uart_transaction) ref2sb;
     mailbox #(uart_transaction) mon2sb;

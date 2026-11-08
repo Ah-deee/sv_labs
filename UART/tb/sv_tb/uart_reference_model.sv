@@ -1,4 +1,3 @@
-`include "uart_transaction.sv"
 class uart_reference_model;
     mailbox #(uart_transaction) mon2ref;
     mailbox #(uart_transaction) ref2sb;

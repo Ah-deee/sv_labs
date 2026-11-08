@@ -1,4 +1,3 @@
-`include "uart_transaction.sv"
 class uart_generator;
     mailbox #(uart_transaction) gen2drv;
     int count;

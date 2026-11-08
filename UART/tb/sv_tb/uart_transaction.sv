@@ -1,5 +1,3 @@
-`ifndef UART_TRANSACTION_SV
-`define UART_TRANSACTION_SV
 class uart_transaction;
     rand bit [7:0] data;
     rand int unsigned gap; //idle clocks before the wr_en
@@ -27,4 +25,3 @@ class uart_transaction;
         return $sformatf("id=%0d data=0x%02h gap=%0d data_out=0x%02h", id, data, gap, data_out);
     endfunction
 endclass
-`endif

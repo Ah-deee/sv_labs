@@ -1,4 +1,3 @@
-import uart_sv_pkg::*;
 class uart_env;
     virtual uart_if vif;
 
