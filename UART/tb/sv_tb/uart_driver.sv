@@ -1,4 +1,3 @@
-`include "uart_transaction.sv"
 class uart_driver;
     uart_transaction t;
     virtual uart_if.drv vif;
@@ -40,7 +39,7 @@ class uart_driver;
         wait(vif.drv_cb.busy);
         wait(vif.drv_cb.rdy);
 
-        $display("%t %s",$time,t.convert2string());
+        $display("[DRV] %0t %s",$time,t.convert2string());
 
         vif.drv_cb.rdy_clr <= 1'b1;@(posedge vif.clk)
         vif.drv_cb.rdy_clr <= 1'b0;

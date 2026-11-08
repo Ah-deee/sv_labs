@@ -50,203 +50,203 @@ run -all
 # [GEN] 100000 id=48 data=0xc9 gap=17 data_out=0x00
 # [GEN] 100000 id=49 data=0xac gap=18 data_out=0x00
 # [REF] 210000  in 0x00  frame 1000000000  expect 0x00
-#           1098730000 id=0 data=0x00 gap=0 data_out=0x00
+# [DRV] 1098730000 id=0 data=0x00 gap=0 data_out=0x00
 # [MON] 1098730000 RX delivered 0
 # [SB] PASS at 1098730000 Received successfully
 # [REF] 1098770000  in 0xff  frame 1111111110  expect 0xff
-#           2138730000 id=1 data=0xff gap=0 data_out=0x00
+# [DRV] 2138730000 id=1 data=0xff gap=0 data_out=0x00
 # [MON] 2138730000 RX delivered ff
 # [SB] PASS at 2138730000 Received successfully
 # [REF] 2138770000  in 0xaa  frame 1101010100  expect 0xaa
-#           3178730000 id=2 data=0xaa gap=0 data_out=0x00
+# [DRV] 3178730000 id=2 data=0xaa gap=0 data_out=0x00
 # [MON] 3178730000 RX delivered aa
 # [SB] PASS at 3178730000 Received successfully
 # [REF] 3178770000  in 0x55  frame 1010101010  expect 0x55
-#           4218730000 id=3 data=0x55 gap=0 data_out=0x00
+# [DRV] 4218730000 id=3 data=0x55 gap=0 data_out=0x00
 # [MON] 4218730000 RX delivered 55
 # [SB] PASS at 4218730000 Received successfully
 # [REF] 4218770000  in 0x01  frame 1000000010  expect 0x01
-#           5265230000 id=4 data=0x01 gap=0 data_out=0x00
+# [DRV] 5265230000 id=4 data=0x01 gap=0 data_out=0x00
 # [MON] 5265230000 RX delivered 1
 # [SB] PASS at 5265230000 Received successfully
 # [REF] 5265270000  in 0x80  frame 1100000000  expect 0x80
-#           6305230000 id=5 data=0x80 gap=0 data_out=0x00
+# [DRV] 6305230000 id=5 data=0x80 gap=0 data_out=0x00
 # [MON] 6305230000 RX delivered 80
 # [SB] PASS at 6305230000 Received successfully
 # [REF] 6308610000  in 0xc2  frame 1110000100  expect 0xc2
-#           7345230000 id=6 data=0xc2 gap=167 data_out=0x00
+# [DRV] 7345230000 id=6 data=0xc2 gap=167 data_out=0x00
 # [MON] 7345230000 RX delivered c2
 # [SB] PASS at 7345230000 Received successfully
 # [REF] 7347770000  in 0x26  frame 1001001100  expect 0x26
-#           8385230000 id=7 data=0x26 gap=125 data_out=0x00
+# [DRV] 8385230000 id=7 data=0x26 gap=125 data_out=0x00
 # [MON] 8385230000 RX delivered 26
 # [SB] PASS at 8385230000 Received successfully
 # [REF] 8386650000  in 0x17  frame 1000101110  expect 0x17
-#           9431730000 id=8 data=0x17 gap=69 data_out=0x00
+# [DRV] 9431730000 id=8 data=0x17 gap=69 data_out=0x00
 # [MON] 9431730000 RX delivered 17
 # [SB] PASS at 9431730000 Received successfully
 # [REF] 9431810000  in 0xba  frame 1101110100  expect 0xba
-#          10471730000 id=9 data=0xba gap=2 data_out=0x00
+# [DRV] 10471730000 id=9 data=0xba gap=2 data_out=0x00
 # [MON] 10471730000 RX delivered ba
 # [SB] PASS at 10471730000 Received successfully
 # [REF] 10471890000  in 0xbf  frame 1101111110  expect 0xbf
-#          11511730000 id=10 data=0xbf gap=6 data_out=0x00
+# [DRV] 11511730000 id=10 data=0xbf gap=6 data_out=0x00
 # [MON] 11511730000 RX delivered bf
 # [SB] PASS at 11511730000 Received successfully
 # [REF] 11511790000  in 0x0f  frame 1000011110  expect 0x0f
-#          12551730000 id=11 data=0x0f gap=1 data_out=0x00
+# [DRV] 12551730000 id=11 data=0x0f gap=1 data_out=0x00
 # [MON] 12551730000 RX delivered f
 # [SB] PASS at 12551730000 Received successfully
 # [REF] 12551950000  in 0xc2  frame 1110000100  expect 0xc2
-#          13591730000 id=12 data=0xc2 gap=9 data_out=0x00
+# [DRV] 13591730000 id=12 data=0xc2 gap=9 data_out=0x00
 # [MON] 13591730000 RX delivered c2
 # [SB] PASS at 13591730000 Received successfully
 # [REF] 13592010000  in 0xa1  frame 1101000010  expect 0xa1
-#          14638230000 id=13 data=0xa1 gap=12 data_out=0x00
+# [DRV] 14638230000 id=13 data=0xa1 gap=12 data_out=0x00
 # [MON] 14638230000 RX delivered a1
 # [SB] PASS at 14638230000 Received successfully
 # [REF] 14641370000  in 0x2f  frame 1001011110  expect 0x2f
-#          15678230000 id=14 data=0x2f gap=155 data_out=0x00
+# [DRV] 15678230000 id=14 data=0x2f gap=155 data_out=0x00
 # [MON] 15678230000 RX delivered 2f
 # [SB] PASS at 15678230000 Received successfully
 # [REF] 15678610000  in 0x86  frame 1100001100  expect 0x86
-#          16718230000 id=15 data=0x86 gap=17 data_out=0x00
+# [DRV] 16718230000 id=15 data=0x86 gap=17 data_out=0x00
 # [MON] 16718230000 RX delivered 86
 # [SB] PASS at 16718230000 Received successfully
 # [REF] 16718270000  in 0x6a  frame 1011010100  expect 0x6a
-#          17758230000 id=16 data=0x6a gap=0 data_out=0x00
+# [DRV] 17758230000 id=16 data=0x6a gap=0 data_out=0x00
 # [MON] 17758230000 RX delivered 6a
 # [SB] PASS at 17758230000 Received successfully
 # [REF] 17760790000  in 0x71  frame 1011100010  expect 0x71
-#          18804730000 id=17 data=0x71 gap=126 data_out=0x00
+# [DRV] 18804730000 id=17 data=0x71 gap=126 data_out=0x00
 # [MON] 18804730000 RX delivered 71
 # [SB] PASS at 18804730000 Received successfully
 # [REF] 18804790000  in 0x97  frame 1100101110  expect 0x97
-#          19844730000 id=18 data=0x97 gap=1 data_out=0x00
+# [DRV] 19844730000 id=18 data=0x97 gap=1 data_out=0x00
 # [MON] 19844730000 RX delivered 97
 # [SB] PASS at 19844730000 Received successfully
 # [REF] 19844970000  in 0x7c  frame 1011111000  expect 0x7c
-#          20884730000 id=19 data=0x7c gap=10 data_out=0x00
+# [DRV] 20884730000 id=19 data=0x7c gap=10 data_out=0x00
 # [MON] 20884730000 RX delivered 7c
 # [SB] PASS at 20884730000 Received successfully
 # [REF] 20884770000  in 0xd6  frame 1110101100  expect 0xd6
-#          21924730000 id=20 data=0xd6 gap=0 data_out=0x00
+# [DRV] 21924730000 id=20 data=0xd6 gap=0 data_out=0x00
 # [MON] 21924730000 RX delivered d6
 # [SB] PASS at 21924730000 Received successfully
 # [REF] 21928470000  in 0x15  frame 1000101010  expect 0x15
-#          22971230000 id=21 data=0x15 gap=185 data_out=0x00
+# [DRV] 22971230000 id=21 data=0x15 gap=185 data_out=0x00
 # [MON] 22971230000 RX delivered 15
 # [SB] PASS at 22971230000 Received successfully
 # [REF] 22971650000  in 0x7b  frame 1011110110  expect 0x7b
-#          24011230000 id=22 data=0x7b gap=19 data_out=0x00
+# [DRV] 24011230000 id=22 data=0x7b gap=19 data_out=0x00
 # [MON] 24011230000 RX delivered 7b
 # [SB] PASS at 24011230000 Received successfully
 # [REF] 24011330000  in 0x6e  frame 1011011100  expect 0x6e
-#          25051230000 id=23 data=0x6e gap=3 data_out=0x00
+# [DRV] 25051230000 id=23 data=0x6e gap=3 data_out=0x00
 # [MON] 25051230000 RX delivered 6e
 # [SB] PASS at 25051230000 Received successfully
 # [REF] 25052510000  in 0x8c  frame 1100011000  expect 0x8c
-#          26091230000 id=24 data=0x8c gap=62 data_out=0x00
+# [DRV] 26091230000 id=24 data=0x8c gap=62 data_out=0x00
 # [MON] 26091230000 RX delivered 8c
 # [SB] PASS at 26091230000 Received successfully
 # [REF] 26091890000  in 0x3d  frame 1001111010  expect 0x3d
-#          27137730000 id=25 data=0x3d gap=31 data_out=0x00
+# [DRV] 27137730000 id=25 data=0x3d gap=31 data_out=0x00
 # [MON] 27137730000 RX delivered 3d
 # [SB] PASS at 27137730000 Received successfully
 # [REF] 27137770000  in 0xf6  frame 1111101100  expect 0xf6
-#          28177730000 id=26 data=0xf6 gap=0 data_out=0x00
+# [DRV] 28177730000 id=26 data=0xf6 gap=0 data_out=0x00
 # [MON] 28177730000 RX delivered f6
 # [SB] PASS at 28177730000 Received successfully
 # [REF] 28179130000  in 0x7c  frame 1011111000  expect 0x7c
-#          29217730000 id=27 data=0x7c gap=68 data_out=0x00
+# [DRV] 29217730000 id=27 data=0x7c gap=68 data_out=0x00
 # [MON] 29217730000 RX delivered 7c
 # [SB] PASS at 29217730000 Received successfully
 # [REF] 29217770000  in 0xba  frame 1101110100  expect 0xba
-#          30257730000 id=28 data=0xba gap=0 data_out=0x00
+# [DRV] 30257730000 id=28 data=0xba gap=0 data_out=0x00
 # [MON] 30257730000 RX delivered ba
 # [SB] PASS at 30257730000 Received successfully
 # [REF] 30257770000  in 0xf9  frame 1111110010  expect 0xf9
-#          31304230000 id=29 data=0xf9 gap=0 data_out=0x00
+# [DRV] 31304230000 id=29 data=0xf9 gap=0 data_out=0x00
 # [MON] 31304230000 RX delivered f9
 # [SB] PASS at 31304230000 Received successfully
 # [REF] 31304270000  in 0x4d  frame 1010011010  expect 0x4d
-#          32344230000 id=30 data=0x4d gap=0 data_out=0x00
+# [DRV] 32344230000 id=30 data=0x4d gap=0 data_out=0x00
 # [MON] 32344230000 RX delivered 4d
 # [SB] PASS at 32344230000 Received successfully
 # [REF] 32344270000  in 0x7d  frame 1011111010  expect 0x7d
-#          33384230000 id=31 data=0x7d gap=0 data_out=0x00
+# [DRV] 33384230000 id=31 data=0x7d gap=0 data_out=0x00
 # [MON] 33384230000 RX delivered 7d
 # [SB] PASS at 33384230000 Received successfully
 # [REF] 33384430000  in 0x0e  frame 1000011100  expect 0x0e
-#          34424230000 id=32 data=0x0e gap=8 data_out=0x00
+# [DRV] 34424230000 id=32 data=0x0e gap=8 data_out=0x00
 # [MON] 34424230000 RX delivered e
 # [SB] PASS at 34424230000 Received successfully
 # [REF] 34425650000  in 0x09  frame 1000010010  expect 0x09
-#          35470730000 id=33 data=0x09 gap=69 data_out=0x00
+# [DRV] 35470730000 id=33 data=0x09 gap=69 data_out=0x00
 # [MON] 35470730000 RX delivered 9
 # [SB] PASS at 35470730000 Received successfully
 # [REF] 35470830000  in 0x79  frame 1011110010  expect 0x79
-#          36510730000 id=34 data=0x79 gap=3 data_out=0x00
+# [DRV] 36510730000 id=34 data=0x79 gap=3 data_out=0x00
 # [MON] 36510730000 RX delivered 79
 # [SB] PASS at 36510730000 Received successfully
 # [REF] 36510770000  in 0x58  frame 1010110000  expect 0x58
-#          37550730000 id=35 data=0x58 gap=0 data_out=0x00
+# [DRV] 37550730000 id=35 data=0x58 gap=0 data_out=0x00
 # [MON] 37550730000 RX delivered 58
 # [SB] PASS at 37550730000 Received successfully
 # [REF] 37550870000  in 0x93  frame 1100100110  expect 0x93
-#          38590730000 id=36 data=0x93 gap=5 data_out=0x00
+# [DRV] 38590730000 id=36 data=0x93 gap=5 data_out=0x00
 # [MON] 38590730000 RX delivered 93
 # [SB] PASS at 38590730000 Received successfully
 # [REF] 38590770000  in 0x43  frame 1010000110  expect 0x43
-#          39637230000 id=37 data=0x43 gap=0 data_out=0x00
+# [DRV] 39637230000 id=37 data=0x43 gap=0 data_out=0x00
 # [MON] 39637230000 RX delivered 43
 # [SB] PASS at 39637230000 Received successfully
 # [REF] 39640890000  in 0x66  frame 1011001100  expect 0x66
-#          40677230000 id=38 data=0x66 gap=181 data_out=0x00
+# [DRV] 40677230000 id=38 data=0x66 gap=181 data_out=0x00
 # [MON] 40677230000 RX delivered 66
 # [SB] PASS at 40677230000 Received successfully
 # [REF] 40677270000  in 0x3b  frame 1001110110  expect 0x3b
-#          41717230000 id=39 data=0x3b gap=0 data_out=0x00
+# [DRV] 41717230000 id=39 data=0x3b gap=0 data_out=0x00
 # [MON] 41717230000 RX delivered 3b
 # [SB] PASS at 41717230000 Received successfully
 # [REF] 41717510000  in 0x51  frame 1010100010  expect 0x51
-#          42757230000 id=40 data=0x51 gap=12 data_out=0x00
+# [DRV] 42757230000 id=40 data=0x51 gap=12 data_out=0x00
 # [MON] 42757230000 RX delivered 51
 # [SB] PASS at 42757230000 Received successfully
 # [REF] 42757670000  in 0x98  frame 1100110000  expect 0x98
-#          43803730000 id=41 data=0x98 gap=20 data_out=0x00
+# [DRV] 43803730000 id=41 data=0x98 gap=20 data_out=0x00
 # [MON] 43803730000 RX delivered 98
 # [SB] PASS at 43803730000 Received successfully
 # [REF] 43803770000  in 0x3d  frame 1001111010  expect 0x3d
-#          44843730000 id=42 data=0x3d gap=0 data_out=0x00
+# [DRV] 44843730000 id=42 data=0x3d gap=0 data_out=0x00
 # [MON] 44843730000 RX delivered 3d
 # [SB] PASS at 44843730000 Received successfully
 # [REF] 44843770000  in 0xc0  frame 1110000000  expect 0xc0
-#          45883730000 id=43 data=0xc0 gap=0 data_out=0x00
+# [DRV] 45883730000 id=43 data=0xc0 gap=0 data_out=0x00
 # [MON] 45883730000 RX delivered c0
 # [SB] PASS at 45883730000 Received successfully
 # [REF] 45884190000  in 0xf4  frame 1111101000  expect 0xf4
-#          46923730000 id=44 data=0xf4 gap=21 data_out=0x00
+# [DRV] 46923730000 id=44 data=0xf4 gap=21 data_out=0x00
 # [MON] 46923730000 RX delivered f4
 # [SB] PASS at 46923730000 Received successfully
 # [REF] 46924610000  in 0x7b  frame 1011110110  expect 0x7b
-#          47970230000 id=45 data=0x7b gap=42 data_out=0x00
+# [DRV] 47970230000 id=45 data=0x7b gap=42 data_out=0x00
 # [MON] 47970230000 RX delivered 7b
 # [SB] PASS at 47970230000 Received successfully
 # [REF] 47970270000  in 0xa5  frame 1101001010  expect 0xa5
-#          49010230000 id=46 data=0xa5 gap=0 data_out=0x00
+# [DRV] 49010230000 id=46 data=0xa5 gap=0 data_out=0x00
 # [MON] 49010230000 RX delivered a5
 # [SB] PASS at 49010230000 Received successfully
 # [REF] 49012390000  in 0xd0  frame 1110100000  expect 0xd0
-#          50050230000 id=47 data=0xd0 gap=106 data_out=0x00
+# [DRV] 50050230000 id=47 data=0xd0 gap=106 data_out=0x00
 # [MON] 50050230000 RX delivered d0
 # [SB] PASS at 50050230000 Received successfully
 # [REF] 50050610000  in 0xc9  frame 1110010010  expect 0xc9
-#          51090230000 id=48 data=0xc9 gap=17 data_out=0x00
+# [DRV] 51090230000 id=48 data=0xc9 gap=17 data_out=0x00
 # [MON] 51090230000 RX delivered c9
 # [SB] PASS at 51090230000 Received successfully
 # [REF] 51090630000  in 0xac  frame 1101011000  expect 0xac
-#          52136730000 id=49 data=0xac gap=18 data_out=0x00
+# [DRV] 52136730000 id=49 data=0xac gap=18 data_out=0x00
 # [MON] 52136730000 RX delivered ac
 # [SB] PASS at 52136730000 Received successfully
 # --------------------------------------------------
